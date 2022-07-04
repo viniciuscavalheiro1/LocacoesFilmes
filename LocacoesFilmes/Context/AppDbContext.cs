@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LocacoesFilmes.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace LocacoesFilmes.Context
 {
@@ -8,7 +9,7 @@ namespace LocacoesFilmes.Context
         {
         }
 
-        public DbSet<Cnae> 
+        public DbSet<Filme> filme { get; set; }
 
     }
 }
