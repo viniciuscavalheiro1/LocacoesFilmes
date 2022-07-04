@@ -10,6 +10,8 @@ namespace LocacoesFilmes.Context
         }
 
         public DbSet<Filme> filme { get; set; }
+        public DbSet<Cliente> cliente { get; set; }
+        public DbSet<Locacao> Locacao { get; set; }
 
     }
 }
