@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace LocacoesFilmes.Models
 {
-    [Table(name: "Filme")]
+    [Table(name: "Cliente")]
     public class Cliente
     {
         [Key]
@@ -12,7 +12,8 @@ namespace LocacoesFilmes.Models
         public string? Nome { get; set; }
         [Required]
         public int CPF { get; set; }
-        [MaxLength(8)]
-        public int DataNascimento { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime? DataNascimento { get; set; }
     }
 }

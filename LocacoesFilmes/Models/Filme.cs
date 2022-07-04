@@ -13,7 +13,9 @@ namespace LocacoesFilmes.Models
         [Required]
         public int ClassificacaoIndicativa { get; set; }
         [Required]
-        public int Lancamento { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        public DateTime? Lancamento { get; set; }
 
     }
 }
